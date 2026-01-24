@@ -149,9 +149,9 @@ const Navbar: React.FC = () => {
             <div>
               <div className="text-zinc-600 text-[10px] font-black italic tracking-widest mb-6">SOCIALS</div>
               <div className="flex flex-wrap gap-8 text-[11px] font-black italic text-zinc-400">
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors tracking-widest">LINKEDIN</a>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors tracking-widest">GITHUB</a>
-                <a href="mailto:work@jothivasan.com" className="hover:text-white transition-colors tracking-widest">EMAIL</a>
+                <a href="https://linkedin.com/in/jothivasan/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors tracking-widest">LINKEDIN</a>
+                <a href="https://github.com/jothivasan" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors tracking-widest">GITHUB</a>
+                <a href="mailto:jothivasan2001@gmail.com" className="hover:text-white transition-colors tracking-widest">EMAIL</a>
               </div>
             </div>
             <div className="hidden md:block">

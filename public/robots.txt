@@ -1,4 +1,11 @@
+# Allow all search engines to crawl the site
 User-agent: *
 Allow: /
 
-Sitemap: https://yourdomain.com/sitemap.xml
+# Sitemap location
+Sitemap: https://jothivasan.dev/sitemap.xml
+
+# Disallow certain files/folders if needed
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /.vscode/
