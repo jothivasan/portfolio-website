@@ -86,6 +86,12 @@ const Navbar: React.FC = () => {
             <div className="hidden lg:flex items-center gap-8 lg:ml-36">
               <button onClick={(e) => scrollToSection(e, 'about')} className={linkClass}>About</button>
               <button onClick={(e) => scrollToSection(e, 'projects')} className={linkClass}>Work</button>
+              <button 
+                onClick={() => window.open('/Jothivasan-Frontend-Developer.pdf', '_blank')}
+                className="text-[10px] font-black italic tracking-widest text-white border border-zinc-800 px-4 py-2 hover:bg-white hover:text-black transition-all duration-300 whitespace-nowrap"
+              >
+                RESUME
+              </button>
             </div>
           </div>
 
@@ -128,6 +134,16 @@ const Navbar: React.FC = () => {
             <button onClick={(e) => scrollToSection(e, 'experience')} className={mobileLinkClass}>Experience</button>
             <button onClick={(e) => scrollToSection(e, 'contact')} className={mobileLinkClass}>Contact</button>
           </div>
+          
+          <button 
+            onClick={() => {
+              setIsMenuOpen(false);
+              window.open('/Jothivasan-Frontend-Developer.pdf', '_blank');
+            }}
+            className="text-[10px] font-black italic tracking-widest text-white border border-zinc-800 px-6 py-3 hover:bg-white hover:text-black transition-all duration-300 whitespace-nowrap w-full sm:w-auto"
+          >
+            RESUME
+          </button>
           
           <div className="mt-auto grid grid-cols-1 md:grid-cols-2 gap-12 border-t border-zinc-900 pt-12">
             <div>
