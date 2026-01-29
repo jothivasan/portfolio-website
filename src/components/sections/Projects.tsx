@@ -200,6 +200,11 @@ const Projects: React.FC = () => {
                       key={project.id}
                       src={project.image}
                       alt={`${project.title} Preview`}
+                      width={800}
+                      height={500}
+                      decoding="async"
+                      loading={index === 0 ? "eager" : "lazy"}
+                      fetchPriority={index === 0 ? "high" : "low"}
                       className={`absolute inset-0 w-full h-full object-contain object-top pt-6 transition-opacity duration-700 ease-in-out ${
                         index === activeIndex
                           ? "opacity-100 z-10"
@@ -210,7 +215,7 @@ const Projects: React.FC = () => {
                 </div>
 
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none z-20"></div>
+                <div className="absolute inset-0 bg-linear-to-t from-black/20 to-transparent pointer-events-none z-20"></div>
               </div>
 
               {/* Glow */}

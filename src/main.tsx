@@ -9,8 +9,15 @@ if (!rootElement) {
 }
 
 const root = createRoot(rootElement);
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-);
+
+// Only use StrictMode in development - it causes double rendering which
+// Safari's JavaScriptCore handles slower than Chromium engines
+if (import.meta.env.DEV) {
+  root.render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>,
+  );
+} else {
+  root.render(<App />);
+}
