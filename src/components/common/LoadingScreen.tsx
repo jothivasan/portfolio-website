@@ -1,5 +1,5 @@
-import * as React from 'react';
-import { useEffect, useState } from 'react';
+import * as React from "react";
+import { useEffect, useState } from "react";
 
 interface LoadingScreenProps {
   onComplete: () => void;
@@ -8,6 +8,17 @@ interface LoadingScreenProps {
 const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
   const [progress, setProgress] = useState(0);
   const [isExiting, setIsExiting] = useState(false);
+
+  // Hide the initial HTML loader when React mounts
+  useEffect(() => {
+    const initialLoader = document.getElementById("initial-loader");
+    if (initialLoader) {
+      initialLoader.style.opacity = "0";
+      setTimeout(() => {
+        initialLoader.remove();
+      }, 300);
+    }
+  }, []);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -29,30 +40,42 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
   }, [onComplete]);
 
   return (
-    <div 
+    <div
       className={`fixed inset-0 z-[1000] bg-black flex flex-col items-center justify-center transition-all duration-700 ease-in-out ${
-        isExiting ? 'opacity-0 scale-110 pointer-events-none' : 'opacity-100 scale-100'
+        isExiting
+          ? "opacity-0 scale-110 pointer-events-none"
+          : "opacity-100 scale-100"
       }`}
     >
       <div className="w-full max-w-[280px] flex flex-col items-center">
         <div className="mb-10 transform transition-transform duration-500 hover:scale-110">
-          <svg width="60" height="69" viewBox="0 0 55 63" fill="none" xmlns="http://www.w3.org/2000/svg" className="animate-pulse">
-            <circle cx="15" cy="48" r="15" fill="#D9D9D9"/>
-            <path d="M34 10.5C34 4.70101 38.701 0 44.5 0C50.299 0 55 4.70101 55 10.5V42C55 53.598 45.598 63 34 63V10.5Z" fill="#1DCD9F"/>
+          <svg
+            width="60"
+            height="69"
+            viewBox="0 0 55 63"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="animate-pulse"
+          >
+            <circle cx="15" cy="48" r="15" fill="#D9D9D9" />
+            <path
+              d="M34 10.5C34 4.70101 38.701 0 44.5 0C50.299 0 55 4.70101 55 10.5V42C55 53.598 45.598 63 34 63V10.5Z"
+              fill="#1DCD9F"
+            />
           </svg>
         </div>
-        
+
         <div className="w-full h-[2px] bg-zinc-900/50 rounded-full overflow-hidden relative backdrop-blur-sm border border-zinc-800/20">
-          <div 
+          <div
             className="absolute top-0 left-0 h-full bg-[#1DCD9F] transition-all duration-300 ease-out shadow-[0_0_15px_rgba(29,205,159,0.5)]"
             style={{ width: `${progress}%` }}
           />
         </div>
-        
+
         <div className="mt-6 flex flex-col items-center gap-2">
           <div className="flex items-baseline gap-2">
             <span className="text-[10px] font-black italic tracking-[0.5em] text-zinc-500 uppercase">
-              {progress < 100 ? 'INITIALIZING' : 'COMPLETE'}
+              {progress < 100 ? "INITIALIZING" : "COMPLETE"}
             </span>
             <span className="text-xs font-black italic text-white w-8 text-right tabular-nums">
               {progress}%
@@ -60,10 +83,10 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
           </div>
           <div className="flex gap-1.5">
             {[...Array(5)].map((_, i) => (
-              <div 
-                key={i} 
+              <div
+                key={i}
                 className={`w-1 h-1 rounded-full transition-colors duration-300 ${
-                  progress > (i + 1) * 20 ? 'bg-[#1DCD9F]' : 'bg-zinc-800'
+                  progress > (i + 1) * 20 ? "bg-[#1DCD9F]" : "bg-zinc-800"
                 }`}
               />
             ))}
