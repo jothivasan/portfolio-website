@@ -4,13 +4,28 @@ import { useEffect, useState } from "react";
 const About: React.FC = () => {
   const [scrollY, setScrollY] = useState(0);
 
-  // Calculate years of experience dynamically
+  // Calculate years of experience dynamically (calendar months like LinkedIn)
   const calculateExperience = () => {
-    const startDate = new Date("2024-07-01"); // Your start date (July 2024)
+    const startDate = new Date("2024-08-01"); // Your start date (August 2024)
     const currentDate = new Date();
-    const diffInMs = currentDate.getTime() - startDate.getTime();
-    const diffInYears = diffInMs / (1000 * 60 * 60 * 24 * 365.25);
-    return diffInYears.toFixed(1); // Returns with 1 decimal place
+    
+    // Calculate total months difference (LinkedIn style)
+    const yearsDiff = currentDate.getFullYear() - startDate.getFullYear();
+    const monthsDiff = currentDate.getMonth() - startDate.getMonth();
+    const totalMonths = yearsDiff * 12 + monthsDiff + 1; // +1 to include current month
+    
+    const years = Math.floor(totalMonths / 12);
+    const months = totalMonths % 12;
+    
+    // Format like "1.5+" for display
+    if (years === 0) {
+      return `${months}m`;
+    } else if (months === 0) {
+      return `${years}`;
+    } else {
+      // Return as decimal for cleaner display (e.g., 1.5+)
+      return `${years}.${Math.round((months / 12) * 10)}`;
+    }
   };
 
   const yearsOfExperience = calculateExperience();
