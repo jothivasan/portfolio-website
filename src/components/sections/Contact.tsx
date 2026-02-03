@@ -43,9 +43,10 @@ const Contact: React.FC = () => {
   };
 
   const socials = [
+    { label: "GMAIL", url: "mailto:Jothivasan2001@gmail.com" },
     { label: "LINKEDIN", url: "https://linkedin.com/in/jothivasan/" },
     { label: "GITHUB", url: "https://github.com/jothivasan" },
-    { label: "GMAIL", url: "mailto:Jothivasan2001@gmail.com" },
+    { label: "LEETCODE", url: "https://leetcode.com/u/Jothi_vasan/" },
   ];
 
   return (

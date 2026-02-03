@@ -240,6 +240,14 @@ const Navbar: React.FC = () => {
                   GITHUB
                 </a>
                 <a
+                  href="https://leetcode.com/u/Jothi_vasan/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors tracking-widest"
+                >
+                  LEETCODE
+                </a>
+                <a
                   href="mailto:jothivasan2001@gmail.com"
                   className="hover:text-white transition-colors tracking-widest"
                 >
