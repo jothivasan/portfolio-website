@@ -13,7 +13,7 @@ const StructuredData: React.FC = () => {
       sameAs: [
         "https://linkedin.com/in/jothivasan",
         "https://github.com/jothivasan",
-        "https://leetcode.com/u/Jothi_vasan/",
+        "https://leetcode.com/u/Jothivasan28/",
       ],
       worksFor: {
         "@type": "Organization",

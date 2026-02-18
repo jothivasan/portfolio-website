@@ -240,7 +240,7 @@ const Navbar: React.FC = () => {
                   GITHUB
                 </a>
                 <a
-                  href="https://leetcode.com/u/Jothi_vasan/"
+                  href="https://leetcode.com/u/Jothivasan28/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors tracking-widest"

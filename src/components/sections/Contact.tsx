@@ -46,7 +46,7 @@ const Contact: React.FC = () => {
     { label: "GMAIL", url: "mailto:Jothivasan2001@gmail.com" },
     { label: "LINKEDIN", url: "https://linkedin.com/in/jothivasan/" },
     { label: "GITHUB", url: "https://github.com/jothivasan" },
-    { label: "LEETCODE", url: "https://leetcode.com/u/Jothi_vasan/" },
+    { label: "LEETCODE", url: "https://leetcode.com/u/Jothivasan28/" },
   ];
 
   return (
