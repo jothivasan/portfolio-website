@@ -116,7 +116,10 @@ const Navbar: React.FC = () => {
               </button>
               <button
                 onClick={() =>
-                  window.open("/Jothivasan-Frontend-Developer.pdf", "_blank")
+                  window.open(
+                    "/Jothivasan-Frontend-Developer(18-02-26).pdf",
+                    "_blank",
+                  )
                 }
                 className="text-[10px] font-black italic tracking-widest text-white border border-zinc-800 px-4 py-2 hover:bg-white hover:text-black transition-all duration-300 whitespace-nowrap"
               >
@@ -210,7 +213,10 @@ const Navbar: React.FC = () => {
           <button
             onClick={() => {
               setIsMenuOpen(false);
-              window.open("/Jothivasan-Frontend-Developer.pdf", "_blank");
+              window.open(
+                "/Jothivasan-Frontend-Developer(18-02-26).pdf",
+                "_blank",
+              );
             }}
             className="text-[10px] font-black italic tracking-widest text-white border border-zinc-800 px-6 py-3 hover:bg-white hover:text-black transition-all duration-300 whitespace-nowrap w-full sm:w-auto"
           >
