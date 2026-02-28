@@ -117,7 +117,7 @@ const Navbar: React.FC = () => {
               <button
                 onClick={() =>
                   window.open(
-                    "/Jothivasan-Frontend-Developer(18-02-26).pdf",
+                    "/Jothivasan-Frontend-Developer(01-03-26).pdf",
                     "_blank",
                   )
                 }
@@ -214,7 +214,7 @@ const Navbar: React.FC = () => {
             onClick={() => {
               setIsMenuOpen(false);
               window.open(
-                "/Jothivasan-Frontend-Developer(18-02-26).pdf",
+                "/Jothivasan-Frontend-Developer(01-03-26).pdf",
                 "_blank",
               );
             }}
